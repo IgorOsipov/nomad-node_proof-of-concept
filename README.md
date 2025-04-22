@@ -1,5 +1,69 @@
-# Vue 3 + TypeScript + Vite
+# Node.js Proof of Concept
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This project is a Proof of Concept (PoC) implementation of a server-side application using Node.js as an alternative to Symfony on PHP.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Features
+
+- 🚀 Modern stack: Node.js + Express + Vue 3
+- 🔥 Hot reload in development mode
+- 📦 Modular architecture with support for multiple applications
+- 🛠️ TypeScript for reliable development
+- ⚡ Vite for fast builds
+
+## Project Structure
+
+```
+├── src/
+│   └── apps/          # Modular applications
+│       ├── announcer/ # Example app 1
+│       └── analytics/ # Example app 2
+├── dist/             # Built files
+├── public/           # Static files
+└── index.ts         # Server entry point
+```
+
+## Installation and Running
+
+### Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run in development mode
+npm run dev
+```
+
+### Production
+
+```bash
+# Build and run in production mode
+npm run prod
+```
+
+## Operation Modes
+
+### Development (`npm run dev`)
+
+- Automatic rebuild on changes
+- Hot server reload
+- Automatic browser refresh
+- Non-minified files with source maps
+
+### Production (`npm run prod`)
+
+- Optimized build
+- Minified files
+- Development mode disabled
+- Maximum performance
+
+## Technologies
+
+- **Backend**: Node.js, Express, TypeScript
+- **Frontend**: Vue 3, Vite
+- **Tools**: TypeScript, Nodemon, WebSocket
+- **Management**: npm, Git
+
+## License
+
+MIT
