@@ -1,0 +1,35 @@
+{
+  "name": "vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run build:watch\" \"npm run server:watch\"",
+    "prod": "npm run build && npm run start:prod",
+    "start": "concurrently \"npm run build:watch\" \"npm run server\"",
+    "start:prod": "cross-env NODE_ENV=production tsx index.ts",
+    "build": "vue-tsc -b && vite build",
+    "build:watch": "vite build --watch --mode development",
+    "server": "tsx index.ts",
+    "server:watch": "nodemon --watch index.ts --watch dist --exec tsx index.ts"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.1",
+    "@types/ws": "^8.18.1",
+    "express": "^5.1.0",
+    "vue": "^3.5.13",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@vitejs/plugin-vue": "^5.2.2",
+    "@vue/tsconfig": "^0.7.0",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.0",
+    "tsx": "^4.7.1",
+    "typescript": "~5.7.2",
+    "vite": "^6.3.1",
+    "vue-tsc": "^2.2.8"
+  }
+}
